@@ -16,6 +16,7 @@ int main(){
         for (int i = size ; i > index ; i--)
         {
             array[i] = array[i-1];
+            
         }
         array[index] = value ;
         size++;
