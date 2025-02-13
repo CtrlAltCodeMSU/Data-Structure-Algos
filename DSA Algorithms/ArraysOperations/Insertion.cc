@@ -7,9 +7,9 @@ int main(){
     int index ;
     cout << "Enter the index you want to shift: " ;
     cin >> index ;
-   int value ;
+    int value ;
     if (index >= 0 && index < size)
-    {
+    {   
         cout << "Enter Value: " ;
         cin >> value ;
 
