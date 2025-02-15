@@ -10,17 +10,21 @@ int secondLargest(vector<int> &array){
     {
         if (array[i]>largest)
         {
+            secondLarge = largest ;
             largest = array[i];
         }
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if (array[i] > secondLarge && array[i] != largest)
-        {
-            secondLarge = array[i] ;
+        else if(array[i] < largest && array[i] > secondLarge) {
+            secondLarge = array[i];
         }
-        
     }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     if (array[i] > secondLarge && array[i] != largest)
+    //     {
+    //         secondLarge = array[i] ;
+    //     }
+        
+    // }
     return secondLarge;
     
 }
