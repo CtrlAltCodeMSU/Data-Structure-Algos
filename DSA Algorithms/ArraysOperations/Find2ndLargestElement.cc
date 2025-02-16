@@ -15,7 +15,7 @@ int secondLargest(vector<int> &array){
         }
         else if(array[i] < largest && array[i] > secondLarge) {
             secondLarge = array[i];
-        }
+        }  
     }
     // for (int i = 0; i < n; i++)
     // {
