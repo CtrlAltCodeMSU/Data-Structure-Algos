@@ -23,7 +23,6 @@ int secondLargest(vector<int> &array){
     //     {
     //         secondLarge = array[i] ;
     //     }
-        
     // }
     return secondLarge;
     
