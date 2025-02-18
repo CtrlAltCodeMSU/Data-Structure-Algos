@@ -17,6 +17,10 @@ void printArray(int array[] , int size){
     }
     cout << endl ;
 }
+// "code-runner.executorMap": {
+
+  //     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
+  // },
 int main(){
     int size ;
     cout << "Enter the size for Array: " ;

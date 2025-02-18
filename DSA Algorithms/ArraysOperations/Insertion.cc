@@ -13,8 +13,7 @@ int main(){
         cout << "Enter Value: " ;
         cin >> value ;
 
-        for (int i = size ; i > index ; i--)
-        {
+        for (int i = size ; i > index ; i--){
             array[i] = array[i-1];
             
         }
@@ -24,6 +23,7 @@ int main(){
         for (int i = 0; i < size; i++) {
             cout << array[i] << " ";
         }
+        cout << endl;
     } else {
         cout << "Invalid index!";
     }

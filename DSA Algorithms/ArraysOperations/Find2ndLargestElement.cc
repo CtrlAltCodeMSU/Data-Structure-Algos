@@ -31,5 +31,6 @@ int main(){
     vector<int> arr =  {12, 35, 1, 10, 34, 1};
     
     cout << "\n " <<secondLargest(arr);
+    cout << endl;
     return 0;
 }

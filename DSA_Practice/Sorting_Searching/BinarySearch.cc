@@ -6,12 +6,10 @@ int binarySearch(int array[],int size ,int target){
     while (left<=right)
     {
         int mid = left + (right - left) / 2 ;
-        if (array[mid]==target)
-        {
+        if (array[mid]==target){
             return mid ;
         }
-        else if (array[mid]<target)
-        {
+        else if (array[mid]<target){
             left = mid + 1 ;
         }
         else if (array[mid]>target)
@@ -29,7 +27,7 @@ int main(){
     if (index!=-1){
         cout << "Element Found" ;
     }
-    else {
+    else{
         cout << "Element Not found!" ;
     }
     return 0;
