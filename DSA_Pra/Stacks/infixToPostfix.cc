@@ -44,7 +44,8 @@ string infixToPostfix(string infix) {
         else if (isOperator(c)) {
             while (!s.empty() && s.top() != '(' && 
                    ((getPrecedence(s.top()) > getPrecedence(c)) || 
-                    (getPrecedence(s.top()) == getPrecedence(c) && c != '^'))) {
+                    (getPrecedence(s.top()) == getPrecedence(c) &&
+                     c != '^'))) {
                 postfix += s.top();
                 s.pop();
             }
