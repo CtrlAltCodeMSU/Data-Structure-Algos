@@ -13,7 +13,6 @@ void deletionElement(int array[] , int &size , int index){
 // }
 for(int i=index;i<size - 1 ;i++){
     array[i]=array[i+1];
-
     }
 size--;
     cout << endl;

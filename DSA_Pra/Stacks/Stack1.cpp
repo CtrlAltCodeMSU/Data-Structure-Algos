@@ -18,8 +18,7 @@ public:
         cout << value << " pushed into stack. " << endl ;
     }
     void pop(){
-        if (top < 0)
-        {
+        if (top < 0){
             cout << "Stack Underflow cannot Pop!" ;
             return ;
         }
