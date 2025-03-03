@@ -10,4 +10,4 @@ int main(){
             cout << x[j] << " " ;
         }
     return 0;
-}
+}   
