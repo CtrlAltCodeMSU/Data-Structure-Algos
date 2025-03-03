@@ -10,8 +10,7 @@ public:
         top = -1 ;
     }
     void push(int value){
-        if (top>=MAX-1)
-        {
+        if (top>=MAX-1){
             cout << "Stack Overflow cannot push " << value ;
             return ; 
         }
@@ -26,10 +25,8 @@ public:
         }
         cout << array[top--] << " Poped from Stack!" << endl ;
     }
-
     int peek(){
-        if (top<0)
-        {
+        if (top<0){
             cout << "Stack is Empty!" ;
             return -1;
         }

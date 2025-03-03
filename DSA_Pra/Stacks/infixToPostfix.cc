@@ -52,7 +52,6 @@ string infixToPostfix(string infix) {
             s.push(c);
         }
     }
-    
     while (!s.empty()) {
         postfix += s.top();
         s.pop();
