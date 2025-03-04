@@ -10,8 +10,7 @@ public:
         top = -1 ;
     }
     void push(int value){
-        if (top>=MAX-1)
-        {
+        if (top>=MAX-1){
             cout << "Stack Overflown Cannot push " << value ;
         }
         else{
