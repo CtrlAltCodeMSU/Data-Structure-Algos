@@ -4,6 +4,7 @@
 #include <cmath>
 using namespace std;
 int operatorExpression(int op1 , int op2 , char opr){
+    cout << "Applying Operator: " << op1 << " " << opr << " " << op2 << endl;
     switch (opr){
     case '+':
         return op1 + op2 ;
@@ -32,9 +33,16 @@ int postExpression(const string& expression){
     stringstream ss(expression);
     string token;
 
+    cout << "Processing Expression: " << expression << endl;
+
     while(ss >> token){
+
+        cout << "Token: " << token << endl;
         if(isdigit(token[0])){
-            stack.push(stoi(token));
+            int num = stoi(token);
+            stack.push(num);
+            cout << "Pusehd to Stack: " << num << endl;
+            // stack.push(stoi(token));
         }else{
             if(stack.size()<2){
                 cerr << "Error: Invalid postfix expression!" << endl;
@@ -43,8 +51,11 @@ int postExpression(const string& expression){
             int opern2 = stack.top() ; stack.pop();
             int opern1 = stack.top() ; stack.pop();
 
+            cout << "Popped from Stack: " << opern1 << " and " << opern2 << endl;
+
             int result = operatorExpression(opern1 ,opern2 , token[0]);
             stack.push(result);
+            cout << "Pushed Result to Stack: " << result << endl;
         }
     }
     if (stack.size()!=1){
@@ -59,8 +70,8 @@ int main(){
     cout  << "Enter your Expression (+,-,*,/,^): " ;
     getline(cin ,  postfix) ;
 
-    cout  << "Result: " << postExpression(postfix) << endl;
+    int result = postExpression(postfix);
+    cout  << "Final Result: " << result<< endl;
     return 0;
     
-    return 0;
 }

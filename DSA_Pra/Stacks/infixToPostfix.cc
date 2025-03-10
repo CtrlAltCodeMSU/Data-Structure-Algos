@@ -44,14 +44,16 @@ string infixToPostfix(string infix) {
             if (!s.empty()) 
                 s.pop(); 
         }
-        else if (isOperator(c)) {
+        else if (isOperator(c)) { 
+            cout << "Processing operator: " << c << endl;
             while (!s.empty() && s.top() != '(' && 
                    ((getPrecedence(s.top()) > getPrecedence(c)) || 
-                    (getPrecedence(s.top()) == getPrecedence(c) &&
-                     c != '^'))) {
-                postfix += s.top();
+                    (getPrecedence(s.top()) == getPrecedence(c) && c != '^'))) {
+                cout << "Popping: " << s.top() << endl;
+                postfix += s.top(); 
                 s.pop();
             }
+            cout << "Pushing: " << c << endl;
             s.push(c);
         }
     }
