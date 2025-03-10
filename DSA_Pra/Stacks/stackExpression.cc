@@ -18,7 +18,7 @@ int performOperation(int operand1 , int operand2 , char operation){
             cerr << "Error: Division by zero!" << endl;
             exit(EXIT_FAILURE);
         }else{
-            return operand1 - operand2 ;
+            return operand1 / operand2 ;
         }
         break;
     default:
