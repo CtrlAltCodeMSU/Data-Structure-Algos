@@ -59,6 +59,7 @@
   "files.associations": {
     "ostream": "cpp",
     "array": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "iostream": "cpp"
   }
 }
