@@ -4,10 +4,8 @@ void largeandsmall(int array[] , int size){
     int small = array[0] ;
     int large = array[0] ;
 
-    for (int i = 0; i < size; i++)
-    {
-        if (array[i]>large)
-        {
+    for (int i = 0; i < size; i++){
+        if (array[i]>large){
             large = array[i] ;
         }else{
             small = array[i] ;
@@ -18,12 +16,9 @@ void largeandsmall(int array[] , int size){
     
 }
 void SortingAlgo(int array[], int size){
-    for (int i = 0; i < size-1; i++)
-    {
-        for (int j = 0; j < size-i-1; j++)
-        {
-            if (array[j]<array[j+1])
-            {
+    for (int i = 0; i < size-1; i++){
+        for (int j = 0; j < size-i-1; j++){
+            if (array[j]<array[j+1]){
                 int temp = array[j] ;
                 array[j] = array[j+1] ;
                 array[j+1] = temp ;
