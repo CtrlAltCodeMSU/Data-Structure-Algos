@@ -1,13 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 class PriorityQueue{
-private:
+
+    public:
     static const int MAX_SIZE = 1000 ;
     int values[MAX_SIZE];
     int priorities[MAX_SIZE];
     int pq_size;
-
-public:
     PriorityQueue(){
         pq_size = -1 ;
     }
@@ -62,11 +61,35 @@ public:
         }
         cout << "Current Priority Queue:\n";
         for (int i = 0; i <= pq_size; i++) {
-            cout << "[Value: " << values[i] << ", Priority: " << priorities[i] << "] ";
+            cout << "[Value: " << values[i] << ", Priority: " << priorities[i] << "] " << endl;
         }
         cout << endl;
     }
 };
 int main(){
+    PriorityQueue pq;
+    pq.enqueue(10,2);
+    pq.enqueue(14,4);
+    pq.enqueue(16,4);
+    pq.enqueue(12,3);
+    pq.enqueue(18,4);
+
+    pq.printQueue();
+    int index = pq.peek();
+    if(index!=-1){
+        cout << "Top Element is: " << pq.peek() << " -> value: " << pq.values[index] << endl ;
+    }
+    pq.dequeue();
+    index =pq.peek();
+    if(index!=-1){
+        cout << "Top Element is: " << pq.peek() << " -> value: " << pq.values[index] << endl;
+    }
+    pq.dequeue();
+    index =pq.peek();
+    if(index!=-1){
+        cout << "Top Element is: " << pq.peek() << " -> value: " << pq.values[index] << endl;
+    }
+    pq.printQueue();
+
 
 }
