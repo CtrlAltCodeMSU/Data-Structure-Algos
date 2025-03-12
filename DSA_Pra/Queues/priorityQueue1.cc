@@ -9,7 +9,7 @@ public:
         size = 0;
     }
     void enqueue(int value){
-        if(size>=0){
+        if(size>=100){
             cout << "Queue is Full!\n" ;
             return ; 
         }
@@ -64,6 +64,14 @@ public:
     }
 };
 int main(){
+    PriorityQueue pq;
+
+    pq.enqueue(30);
+    pq.enqueue(10);
+    pq.enqueue(50);
+    pq.enqueue(20);
+
+    pq.display();
     
     return 0;
 }
