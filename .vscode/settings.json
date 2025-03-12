@@ -60,6 +60,8 @@
     "ostream": "cpp",
     "array": "cpp",
     "algorithm": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "bitset": "cpp",
+    "format": "cpp"
   }
 }
