@@ -50,14 +50,12 @@ public:
         return size==0;
     }   
     void display(){
-        if (size==0)
-        {
+        if (size==0){
             cout << "Queue is Empty\n" ;
             return ;
         }
         cout << "Priority Queue: " ;
-        for (int i = 0; i < size; i++)
-        {
+        for (int i = 0; i < size; i++){
             cout << array[i] << " " ;
         }
         cout << endl;
