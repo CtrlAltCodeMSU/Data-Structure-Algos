@@ -62,6 +62,18 @@
     "algorithm": "cpp",
     "iostream": "cpp",
     "bitset": "cpp",
-    "format": "cpp"
+    "format": "cpp",
+    "*.tcc": "cpp",
+    "charconv": "cpp",
+    "chrono": "cpp",
+    "expected": "cpp",
+    "optional": "cpp",
+    "ratio": "cpp",
+    "system_error": "cpp",
+    "functional": "cpp",
+    "regex": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp"
   }
 }
