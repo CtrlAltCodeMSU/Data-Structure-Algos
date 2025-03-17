@@ -23,5 +23,6 @@ int main(){
     }
     cout << "Max_Value is: " << maxValue << endl;
     cout << "Min_Value is: " << minValue << endl;
+
     return 0;
 }
