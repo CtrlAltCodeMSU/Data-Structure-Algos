@@ -50,6 +50,7 @@ int main(){
     Linked_List ll;
     ll.push_front(10);
     ll.push_front(20);
+    ll.push_front(70);
     ll.push_front(30);
     ll.push_front(40);
 
