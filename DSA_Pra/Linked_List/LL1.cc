@@ -28,6 +28,15 @@ public:
             head = newNode ;
         }
     }
+    void push_back(int value){
+        Node* newNode = new Node(value);
+        if(head==NULL){
+            head = tail = newNode ;
+        } else {
+            tail -> next = newNode ;
+            tail = newNode ;
+        }
+    }
     void display_LL(){
         Node* temp = head ;
         while(temp!=NULL){
@@ -44,9 +53,10 @@ int main(){
     ll.push_front(30);
     ll.push_front(40);
 
+    ll.push_back(50);
+    ll.push_back(60);
 
-    ll.display_LL();
-    
+    ll.display_LL();    
     
     return 0;
 }
