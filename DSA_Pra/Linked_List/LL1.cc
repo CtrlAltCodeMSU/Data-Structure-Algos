@@ -37,6 +37,24 @@ public:
             tail = newNode ;
         }
     }
+    void insert(int value, int position) {
+        if(position<0){
+            cout << "Invalid Position\n" ;
+            return ;
+        }
+        if(position == 0) {
+            push_front(value) ;
+            return ;
+        }
+        Node *temp = head ;
+        for(int i = 0 ; i<position-1;i++){
+            temp = temp -> next ;
+
+        }
+        Node* newNode = new Node(value);
+        newNode->next=temp->next;
+        temp->next=newNode;
+    }
     void display_LL(){
         Node* temp = head ;
         while(temp!=NULL){
@@ -57,6 +75,7 @@ int main(){
     ll.push_back(50);
     ll.push_back(60);
 
+    ll.insert(45,4);
     ll.display_LL();    
     
     return 0;
