@@ -2,7 +2,7 @@
 using namespace std;
 class Node{
 public:
-    int data ;
+    int data;
     Node* next;
 
     Node(int value){
@@ -16,13 +16,13 @@ class Linked_List{
 
 public:
     Linked_List(){
-        head = tail = NULL ;
+        head = tail = NULL;
     }
     void push_front(int value){
-        Node* newNode = new Node(value); // dynamic object 
-        if(head== NULL){
+        Node* newNode = new Node(value);
+
+        if(head==NULL){
             head = tail = newNode ;
-            return;
         } else {
             newNode -> next = head ;
             head = newNode ;
@@ -37,31 +37,30 @@ public:
             tail = newNode ;
         }
     }
-    void insert(int value, int position) {
+    void insert(int value, int position){
         if(position<0){
             cout << "Invalid Position\n" ;
             return ;
-        }
-        if(position == 0) {
-            push_front(value) ;
-            return ;
+        } 
+        if(position==0){
+            push_front(value);
+            return;
         }
         Node* temp = head ;
-        for(int i = 0 ; i<position-1;i++){
+        for(int i=0; i<position-1;i++){
             temp = temp -> next ;
-
         }
         Node* newNode = new Node(value);
-        newNode->next=temp->next;
+        newNode->next = temp->next ;
         temp->next=newNode;
     }
-    void display_LL(){
-        Node* temp = head ;
-        while(temp!=NULL){
-            cout << temp -> data << "->" ;
-            temp = temp -> next ;
+    void display(){
+        Node* temp = head;
+        while (temp!=NULL){
+            cout << temp->data << "->" ;
+            temp = temp->next;
         }
-        cout <<"NULL"<< endl;
+        cout << "NULL" << endl ;
     }
 };
 int main(){
@@ -76,7 +75,6 @@ int main(){
     ll.push_back(60);
 
     ll.insert(45,4);
-    ll.display_LL();    
-    
+    ll.display();
     return 0;
 }
