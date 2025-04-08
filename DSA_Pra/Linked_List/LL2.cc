@@ -79,6 +79,29 @@ class LinkedList{
         tail = temp ;
         tail->next=NULL;
     }
+    void deleteAtIndex(int pos){
+        if(pos<0||head==NULL){
+            cout << "Invalid index or list is Empty";
+            return;
+        }
+        if(pos==0){
+            deleteAtStart();
+            return;
+        }
+        Node* temp = head;
+        for(int i=0;i<pos-1&&temp->next!=NULL;i++){
+            temp = temp->next;
+        }
+        if(temp->next==NULL){
+            cout << "Out of Range" ;
+        }
+        Node* nodeToDel = temp->next ;
+        temp->next=nodeToDel->next;
+        if(nodeToDel==tail){
+            tail= temp;
+        }
+        delete nodeToDel;
+    }
     void display(){
         Node* temp = head;
         while(temp!=NULL){
