@@ -28,7 +28,7 @@ public:
             head = newNode ;
         }
     }
-    void push_back(int value){
+        void push_back(int value){
         Node* newNode = new Node(value);
         if(head==NULL){
             head = tail = newNode ;

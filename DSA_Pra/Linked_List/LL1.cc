@@ -20,7 +20,7 @@ public:
     }
     void push_front(int value){
         Node* newNode = new Node(value); // dynamic object 
-        if(head== NULL){
+        if(head == NULL){
             head = tail = newNode ;
             return;
         } else {
@@ -48,7 +48,7 @@ public:
         }
         Node* temp = head ;
         for(int i = 0 ; i<position-1;i++){
-            temp = temp -> next ;
+            temp = temp->next ;
 
         }
         Node* newNode = new Node(value);
