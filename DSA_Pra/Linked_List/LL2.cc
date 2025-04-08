@@ -52,12 +52,23 @@ class LinkedList{
         newNode->next =temp->next;
         temp->next=newNode;
     }
+    void deleteAtStart(){
+        if(head==NULL){
+            cout << "Linked list is empty" ;
+        }
+        Node* temp= head;
+        head = head->next;
+        delete temp;
+
+    }
+    
     void display(){
         Node* temp = head;
         while(temp!=NULL){
             cout << temp->data << "->" ;
             temp = temp->next;
         }
+        cout <<"NULL"<< endl;
     }
 };
 int main(){
@@ -72,6 +83,9 @@ int main(){
     ll.pushback(60);
 
     ll.insertAtIndex(45,4);
+    ll.display();
+
+    ll.deleteAtStart();
     ll.display();
     return 0;
 }
