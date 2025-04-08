@@ -129,5 +129,7 @@ int main(){
     ll.display();
     ll.deleteAtEnd();
     ll.display();
+    ll.deleteAtIndex(3);
+    ll.display();
     return 0;
 }
