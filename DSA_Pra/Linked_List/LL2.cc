@@ -61,7 +61,24 @@ class LinkedList{
         delete temp;
 
     }
-    
+    void deleteAtEnd(){
+        if(head==NULL){
+            cout << "list is Empty";
+            return;
+        }
+        if(head->next==NULL){
+            delete head;
+            head=tail=NULL;
+            return;
+        }
+        Node* temp = head;
+        while(temp->next!=tail){
+            temp = temp->next;
+        }
+        delete tail;
+        tail = temp ;
+        tail->next=NULL;
+    }
     void display(){
         Node* temp = head;
         while(temp!=NULL){
@@ -86,6 +103,8 @@ int main(){
     ll.display();
 
     ll.deleteAtStart();
+    ll.display();
+    ll.deleteAtEnd();
     ll.display();
     return 0;
 }
