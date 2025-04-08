@@ -1,80 +1,77 @@
 #include <iostream>
 using namespace std;
 class Node{
-public:
-    int data;
-    Node* next;
-
-    Node(int value){
-        data = value ;
-        next = NULL ;
+    public:
+        int data;
+        Node* next;
+        Node(int value){
+            data = value;
+            next = NULL;
     }
 };
-class Linked_List{
-    Node* head;
-    Node* tail;
+class LinkedList{
+    public:
+        Node* head;
+        Node* tail;
 
-public:
-    Linked_List(){
-        head = tail = NULL;
+    LinkedList(){
+        head = tail = NULL ;
     }
-    void push_front(int value){
+    void pushFront(int value){
         Node* newNode = new Node(value);
-
         if(head==NULL){
             head = tail = newNode ;
         } else {
-            newNode -> next = head ;
+            newNode->next=head;
             head = newNode ;
         }
     }
-        void push_back(int value){
+    void pushback(int value){
         Node* newNode = new Node(value);
         if(head==NULL){
             head = tail = newNode ;
         } else {
-            tail -> next = newNode ;
-            tail = newNode ;
+            tail->next = newNode ;
+            tail = newNode;
         }
     }
-    void insert(int value, int position){
+    void insertAtIndex(int value, int position){
         if(position<0){
-            cout << "Invalid Position\n" ;
-            return ;
+            cout << "Invalid index!" ;
+            return;
         } 
         if(position==0){
-            push_front(value);
+            pushFront(value);
             return;
         }
-        Node* temp = head ;
-        for(int i=0; i<position-1;i++){
-            temp = temp -> next ;
+        Node* temp = head;
+        for(int i = 0;i<position-1;i++){
+            temp = temp->next;
         }
         Node* newNode = new Node(value);
-        newNode->next = temp->next ;
+        newNode->next =temp->next;
         temp->next=newNode;
     }
     void display(){
         Node* temp = head;
-        while (temp!=NULL){
+        while(temp!=NULL){
             cout << temp->data << "->" ;
             temp = temp->next;
         }
-        cout << "NULL" << endl ;
     }
 };
 int main(){
-    Linked_List ll;
-    ll.push_front(10);
-    ll.push_front(20);
-    ll.push_front(70);
-    ll.push_front(30);
-    ll.push_front(40);
+    LinkedList ll;
+    ll.pushFront(20);
+    ll.pushFront(10);
+    ll.pushFront(70);
+    ll.pushFront(30);
+    ll.pushFront(40);
 
-    ll.push_back(50);
-    ll.push_back(60);
+    ll.pushback(50);
+    ll.pushback(60);
 
-    ll.insert(45,4);
+    ll.insertAtIndex(45,4);
     ll.display();
     return 0;
 }
